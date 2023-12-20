@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title >SVG Editor</title>
+
+    <link rel="icon" href="./media/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+ 
+</head>
+<body>
+    
+    <h1>SVG Editor</h1>
+    <div id="navbar">
+            <button id="save" onclick="saveToPNG()">Export PNG</button>
+            <button id="saveSVG" onclick="saveToSVG()">Export SVG</button>
+            <br>
+            <div id="undoRedoButtons">
+            <button class="modify" id="undo">
+                <img id="undoImg" src="./media/undo.png"/>
+            </button>
+            <button class="modify" id="redo">
+                <img id="redoImg" src="./media/redo.png"/>
+            </button>
+        </div>
+    </div>
+
+    <div id="tools">
+            Shapes:
+            <button class="shape" id="line">
+                <img class="shapeImg" src="./media/line.png"/>
+            </button>
+            <button class="shape" id="rect">
+                <img class="shapeImg" src="./media/rectangle.svg"/>
+            </button>
+            <button class="shape" id="ellipse">
+                <img class="shapeImg" src="./media/circle.svg"/>
+            </button>
+            <br><br>
+            <label for="color">Color:</label>
+            <input type="color" id="color" value="#000000">
+    
+            
+            <br>
+            <label for="size">Size:</label>
+            <input name ="size" type="number" id="size" value="1" min="1">
+            
+    </div>
+
+
+    <svg id="svgContainer"></svg>
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
